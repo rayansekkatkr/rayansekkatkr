@@ -30,13 +30,14 @@ I build production backends and the platforms they run on: TypeScript / NestJS a
 > These are live products, so their source code is private. I'm happy to walk through the architecture and code during an interview.
 
 ### 🎮 GoodCall · esports prediction platform · [goodcall.gg](https://goodcall.gg)
-Multilingual prediction app for League of Legends, Valorant, CS2 and Rocket League. I designed the mobile and backend architecture: provider data ingestion, scoring engine, **idempotent match settlement**, **points ledger**, leaderboards and private leagues.
-`TypeScript` `React Native` `Expo` `NestJS` `PostgreSQL` `Prisma` `Redis` `Docker` `GitHub Actions` `Turborepo`
+Esports prediction app (League of Legends, CS2, Valorant and more) in 6 languages. I designed the whole system: provider ingestion with BullMQ workers, **versioned idempotent settlement**, an append-only **points ledger** in PostgreSQL, Redis leaderboards and private leagues.
+`TypeScript` `React Native` `Expo` `NestJS` `PostgreSQL` `Prisma` `Redis` `BullMQ` `Docker` `GitHub Actions` `Turborepo`
 ➡️ [Architecture case study](https://github.com/rayansekkatkr/goodcall-case-study)
 
 ### 🧾 Pont Factur-X · AI-powered B2B e-invoicing SaaS · [pont-facturx.com](https://www.pont-facturx.com)
-SaaS for French structured e-invoicing (Factur-X): AI document-extraction pipelines, API logic, structured invoice generation and subscription billing.
-`Python` `FastAPI` `PostgreSQL` `Redis` `Docker` `MinIO` `Stripe` `Mistral AI`
+SaaS for the French e-invoicing reform: AI extraction (Mistral OCR) with human review, Factur-X generation validated against XSD, EN 16931 Schematron and veraPDF, and idempotent transmission to Chorus Pro.
+`Python` `FastAPI` `Celery` `PostgreSQL` `Redis` `Next.js` `Docker` `Stripe` `Mistral AI`
+➡️ [Architecture case study](https://github.com/rayansekkatkr/pont-facturx-case-study)
 
 ### 📦 Pick4Me · delivery & shopping marketplace · [pick4me.be](https://pick4me.be)
 Mission workflows, real-time chat and notifications, helper operations, location tracking and payment flows.
